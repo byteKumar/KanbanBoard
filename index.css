@@ -1,0 +1,228 @@
+:root {
+    --p1: pink;
+    --p2: greenyellow;
+    --p3: blue;
+    --p4: black;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    background-color: #4b4b4b;
+    padding: 10px 0 10px 50px;
+}
+
+.heading {
+    padding: 15px 0 0 30px;
+}
+
+.sorting {
+    display: flex;
+    padding: 10px;
+    background-color: #3d3d3d;
+    column-gap: 10px;
+}
+
+.sorting .box {
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.sorting .box.selected {
+    border: 2px solid red;
+}
+
+.sorting .box:hover {
+    border: 2px solid white;
+}
+
+.sorting .box.p1 {
+    background-color: var(--p1);
+}
+
+.sorting .box.p2 {
+    background-color: var(--p2);
+}
+
+.sorting .box.p3 {
+    background-color: var(--p3);
+
+}
+
+.sorting .box.p4 {
+    background-color: var(--p4);
+}
+
+.actions {
+    display: flex;
+    background-color: #3d3d3d;
+    margin: 0 30px;
+}
+
+.actions .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+.actions .box:hover {
+    background-color: green;
+}
+
+.actions .remove.box.selected {
+    color: red;
+}
+
+.non-editable .task .task-remove {
+    display: none;
+}
+
+.non-editable .task {
+    pointer-events: none;
+}
+
+.search input {
+    width: 300px;
+    height: 50px;
+    background-color: white;
+    font-size: 18px;
+    padding: 0 15px;
+}
+
+.task-section {
+    display: flex;
+    column-gap: 30px;
+    padding: 30px;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+.task-section .task {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 150px;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+.task-section .task .task-priority {
+    height: 10px;
+    background-color: blue;
+}
+
+.task-section .task .task-id {
+    height: 20px;
+    background-color: yellow;
+}
+
+.task-section .task .task-title {
+    flex-grow: 1;
+    display: flex;
+    padding: 10px;
+    background-color: orange;
+}
+
+.task-section .task .task-title span {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.task-section .task .task-remove {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    cursor: pointer;
+}
+
+.add-task-modal {
+    display: flex;
+    width: 600px;
+    height: 300px;
+    background-color: #ccc;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.add-task-modal .left-section {
+    display: flex;
+    flex-grow: 1;
+}
+
+.add-task-modal .left-section textarea {
+    display: flex;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.add-task-modal .right-section {
+    display: flex;
+    width: 120px;
+    flex-direction: column;
+    padding: 10px;
+    row-gap: 10px;
+    justify-content: center;
+}
+
+.add-task-modal .right-section .box {
+    width: 100px;
+    height: 60px;
+}
+
+.add-task-modal .right-section .box:hover {
+    border: 2px solid white;
+}
+
+.add-task-modal .right-section .box.p1 {
+    background-color: var(--p1);
+}
+
+.add-task-modal .right-section .box.p2 {
+    background-color: var(--p2) ;
+}
+
+.add-task-modal .right-section .box.p3 {
+    background-color: var(--p3);
+}
+
+.add-task-modal .right-section .box.p4 {
+    background-color: var(--p4);
+}
+
+.add-task-modal .right-section .box.selected {
+    border: 2px solid red;
+}
+
+.hide {
+    display: none;
+}
+
+.task [data-priority="p1"].task-priority {
+    background-color: pink;
+}
+
+.task [data-priority="p2"].task-priority {
+    background-color: greenyellow;
+}
+
+.task [data-priority="p3"].task-priority {
+    background-color: blue;
+}
+
+.task [data-priority="p4"].task-priority {
+    background-color: black;
+}
